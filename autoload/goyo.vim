@@ -94,15 +94,15 @@ function! s:resize_pads()
   let yoff = s:const(t:goyo_dim.yoff, - vmargin, vmargin)
   let top = vmargin + yoff
   let bot = vmargin - yoff - 1
-  call s:setup_pad(t:goyo_pads.t, 0, top, 'j')
-  call s:setup_pad(t:goyo_pads.b, 0, bot, 'k')
+  " call s:setup_pad(t:goyo_pads.t, 0, top, 'j')
+  " call s:setup_pad(t:goyo_pads.b, 0, bot, 'k')
 
   let nwidth  = max([len(string(line('$'))) + 1, &numberwidth])
   let width   = t:goyo_dim.width + (&number ? nwidth : 0)
   let hmargin = max([0, (&columns - width) / 2 - 1])
   let xoff    = s:const(t:goyo_dim.xoff, - hmargin, hmargin)
-  call s:setup_pad(t:goyo_pads.l, 1, hmargin + xoff, 'l')
-  call s:setup_pad(t:goyo_pads.r, 1, hmargin - xoff, 'h')
+  " call s:setup_pad(t:goyo_pads.l, 1, hmargin + xoff, 'l')
+  " call s:setup_pad(t:goyo_pads.r, 1, hmargin - xoff, 'h')
 endfunction
 
 function! s:tranquilize()
@@ -250,10 +250,10 @@ function! s:goyo_on(dim)
     set guioptions-=L
   endif
 
-  let t:goyo_pads.l = s:init_pad('vertical topleft new')
-  let t:goyo_pads.r = s:init_pad('vertical botright new')
-  let t:goyo_pads.t = s:init_pad('topleft new')
-  let t:goyo_pads.b = s:init_pad('botright new')
+  " let t:goyo_pads.l = s:init_pad('vertical topleft new')
+  " let t:goyo_pads.r = s:init_pad('vertical botright new')
+  " let t:goyo_pads.t = s:init_pad('topleft new')
+  " let t:goyo_pads.b = s:init_pad('botright new')
 
   call s:resize_pads()
   call s:tranquilize()
