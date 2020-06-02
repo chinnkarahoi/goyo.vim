@@ -199,13 +199,13 @@ function! s:goyo_on(dim)
   " vim-gitgutter
   let t:goyo_disabled_gitgutter = get(g:, 'gitgutter_enabled', 0)
   if t:goyo_disabled_gitgutter
-    silent! GitGutterDisable
+    " silent! GitGutterDisable
   endif
 
   " vim-signify
   let t:goyo_disabled_signify = exists('b:sy') && b:sy.active
   if t:goyo_disabled_signify
-    SignifyToggle
+    " SignifyToggle
   endif
 
   " vim-airline
