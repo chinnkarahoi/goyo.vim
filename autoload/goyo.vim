@@ -106,23 +106,23 @@ function! s:resize_pads()
 endfunction
 
 function! s:tranquilize()
-  let bg = s:get_color('Normal', 'bg#')
-  for grp in ['NonText', 'FoldColumn', 'ColorColumn', 'VertSplit',
-            \ 'StatusLine', 'StatusLineNC', 'SignColumn']
-    " -1 on Vim / '' on GVim
-    if bg == -1 || empty(bg)
-      call s:set_color(grp, 'fg', get(g:, 'goyo_bg', 'black'))
-      call s:set_color(grp, 'bg', 'NONE')
-    else
-      call s:set_color(grp, 'fg', bg)
-      call s:set_color(grp, 'bg', bg)
-    endif
-    call s:set_color(grp, '', 'NONE')
-  endfor
+  " let bg = s:get_color('Normal', 'bg#')
+  " for grp in ['NonText', 'FoldColumn', 'ColorColumn', 'VertSplit',
+  "           \ 'StatusLine', 'StatusLineNC', 'SignColumn']
+  "   " -1 on Vim / '' on GVim
+  "   if bg == -1 || empty(bg)
+  "     call s:set_color(grp, 'fg', get(g:, 'goyo_bg', 'black'))
+  "     call s:set_color(grp, 'bg', 'NONE')
+  "   else
+  "     call s:set_color(grp, 'fg', bg)
+  "     call s:set_color(grp, 'bg', bg)
+  "   endif
+  "   call s:set_color(grp, '', 'NONE')
+  " endfor
 endfunction
 
 function! s:hide_statusline()
-  setlocal statusline=\ 
+  " setlocal statusline=\ 
 endfunction
 
 function! s:hide_linenr()
@@ -238,9 +238,9 @@ function! s:goyo_on(dim)
   set laststatus=0
   set showtabline=0
   set noruler
-  set fillchars+=vert:\ 
-  set fillchars+=stl:\ 
-  set fillchars+=stlnc:\ 
+  " set fillchars+=vert:\ 
+  " set fillchars+=stl:\ 
+  " set fillchars+=stlnc:\ 
   set sidescroll=1
   set sidescrolloff=0
 
