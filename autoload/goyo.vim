@@ -419,8 +419,8 @@ endfunction
 
 function! goyo#execute(bang, dim)
   if a:bang
-    if exists('#goyo')
-      call s:goyo_off()
+    if exists('#goyo') == 0
+      call s:goyo_on(a:dim)
     endif
   else
     if exists('#goyo') == 0
