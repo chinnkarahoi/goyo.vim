@@ -337,7 +337,7 @@ function! s:goyo_off()
   for [k, v] in items(goyo_revert)
     execute printf('let &%s = %s', k, string(v))
   endfor
-  execute 'colo '. get(g:, 'colors_name', 'default')
+  " execute 'colo '. get(g:, 'colors_name', 'default')
 
   if goyo_disabled_gitgutter
     silent! GitGutterEnable
